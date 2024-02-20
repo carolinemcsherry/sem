@@ -1,7 +1,4 @@
-ARG REGISTRY
-FROM ${REGISTRY}library/alpine:3.19
-ENV PYTHONUNBUFFERED=1
-ENV VIRTUAL_ENV=/app/venv
-COPY app1/app.py /app/app.py
-COPY app1/default.toml app1/requirements.txt /app/
-COPY libs /app/libs
+FROM openjdk:latest
+COPY ./target/seMethods-0.1.0.2-jar-with-dependencies.jar /tmp
+WORKDIR /tmp
+ENTRYPOINT ["java", "-jar", "seMethods-0.1.0.2-jar-with-dependencies.jar"]
