@@ -1,4 +1,4 @@
-Hello world hsfekghf blahahah
+Hello world
 some more blah blah blah
 
 ![workflow](https://github.com/carolinemcsherry/sem/actions/workflows/main.yml/badge.svg)
